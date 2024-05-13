@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "prompt-sync": "^4.2.0",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "sucrase": "^3.35.0"
+  }
+}
