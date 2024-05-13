@@ -1,1 +1,1 @@
-import readCVS from 
+import readCVS from '../model/readCVS'
