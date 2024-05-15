@@ -28,3 +28,11 @@ export async function retirar(nome:string) {
     }
 }
 
+export async function valorTotal(data:Data) {
+    try {
+        const valorTotal = await ServiceEstoque.valorTotal(data)
+    } catch (error) {
+        console.log(error);
+    }
+}
+
