@@ -3,7 +3,7 @@ import Data from "./model/Data";
 
 const receber = require('prompt-sync')({ sigint: true });
 
-const textoInicial = 'Bem vindo ao Estoque, selecione uma opção:\nVer Estoque: 1\nAdicionar um item: 2\nRemover um item: 3\n';
+const textoInicial = 'Bem vindo ao Estoque, selecione uma opção:\nVer estoque: 1\nAdicionar um item: 2\nRemover um item: 3\nVer valor total do estoque: 4\n';
 
 console.log(textoInicial);
 let action = receber();
@@ -36,6 +36,7 @@ const base = async () => {
             const nome = receber();
             await retirar(nome);
             break;
+        case '4':    
     }
 }
 
