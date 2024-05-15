@@ -43,6 +43,19 @@ class ServiceEstoque {
         fs.appendFileSync(filePath, 'nome,peso,valor,quantidade\n');
         writeCSV (filePath, dados);
     }
+    async valorTotal(data:Data) {
+        function multiplicar(valor:number, quantidade:number) {
+            return valor * quantidade;
+        }
+
+        const valor = data.valor;
+        const quantidade = data.quantidade;
+        const dados = await readCSV(filePath);
+        if(dados.length == 0){
+            throw new Error ('Estoque vazio')
+        }
+        return multiplicar;
+    }
 }
 
 export default new ServiceEstoque;
