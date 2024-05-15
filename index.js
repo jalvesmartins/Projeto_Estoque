@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const controleEstoque_1 = require("./controller/controleEstoque");
 const receber = require('prompt-sync')({ sigint: true });
-const textoInicial = 'Bem vindo ao Estoque, selecione uma opção:\nVer Estoque: 1\nAdicionar um item: 2\nRemover um item: 3\n';
+const textoInicial = 'Bem vindo ao Estoque, selecione uma opção:\nVer estoque: 1\nAdicionar um item: 2\nRemover um item: 3\nVer valor total do estoque: 4\n';
 console.log(textoInicial);
 let action = receber();
 const base = () => __awaiter(void 0, void 0, void 0, function* () {
@@ -41,6 +41,8 @@ const base = () => __awaiter(void 0, void 0, void 0, function* () {
             const nome = receber();
             yield (0, controleEstoque_1.retirar)(nome);
             break;
+        case '4':
+            console.log(`Valor total = ${controleEstoque_1.valorTotal}`);
     }
 });
 base();
