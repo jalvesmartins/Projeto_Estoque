@@ -1,4 +1,4 @@
-import { adicionar, listar, retirar } from "./controller/controleEstoque";
+import { adicionar, listar, retirar, valorTotal } from "./controller/controleEstoque";
 import Data from "./model/Data";
 
 const receber = require('prompt-sync')({ sigint: true });
@@ -36,7 +36,8 @@ const base = async () => {
             const nome = receber();
             await retirar(nome);
             break;
-        case '4':    
+        case '4':
+            console.log(`Valor total = ${valorTotal}`)    
     }
 }
 
