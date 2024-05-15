@@ -30,7 +30,8 @@ export async function retirar(nome:string) {
 
 export async function valorTotal(data:Data) {
     try {
-        const valorTotal = await ServiceEstoque.valorTotal(data)
+        const valorEstoque = await ServiceEstoque.valorTotal(data);
+        console.log(valorEstoque);
     } catch (error) {
         console.log(error);
     }

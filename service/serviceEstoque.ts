@@ -44,17 +44,16 @@ class ServiceEstoque {
         writeCSV (filePath, dados);
     }
     async valorTotal(data:Data) {
+        const valor = data.valor;
+        const quantidade = data.quantidade;
         function multiplicar(valor:number, quantidade:number) {
             return valor * quantidade;
         }
-
-        const valor = data.valor;
-        const quantidade = data.quantidade;
         const dados = await readCSV(filePath);
         if(dados.length == 0){
             throw new Error ('Estoque vazio')
         }
-        return multiplicar;
+        return multiplicar(valor, quantidade);
     }
 }
 

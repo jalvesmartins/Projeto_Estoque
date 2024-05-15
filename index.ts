@@ -37,7 +37,7 @@ const base = async () => {
             await retirar(nome);
             break;
         case '4':
-            console.log(`Valor total = ${valorTotal}`)    
+            await valorTotal()    
     }
 }
 
