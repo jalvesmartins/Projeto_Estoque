@@ -59,18 +59,20 @@ class ServiceEstoque {
             (0, writeCSV_1.default)(filePath, dados);
         });
     }
-    valorTotal(data) {
+    valorTotal() {
         return __awaiter(this, void 0, void 0, function* () {
-            function multiplicar(valor, quantidade) {
-                return valor * quantidade;
-            }
-            const valor = data.valor;
-            const quantidade = data.quantidade;
+            let acumulador = 0;
             const dados = yield (0, readCSV_1.default)(filePath);
             if (dados.length == 0) {
                 throw new Error('Estoque vazio');
             }
-            return multiplicar;
+            function multiplicar(valor, quantidade) {
+                return valor * quantidade;
+            }
+            dados.forEach(dados => {
+                acumulador += multiplicar(dados.valor, dados.quantidade);
+            });
+            return acumulador;
         });
     }
 }

@@ -42,7 +42,8 @@ const base = () => __awaiter(void 0, void 0, void 0, function* () {
             yield (0, controleEstoque_1.retirar)(nome);
             break;
         case '4':
-            console.log(controleEstoque_1.valorTotal);
+            yield (0, controleEstoque_1.valorTotal)();
+            break;
     }
 });
 base();

@@ -50,10 +50,11 @@ function retirar(nome) {
     });
 }
 exports.retirar = retirar;
-function valorTotal(data) {
+function valorTotal() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const valorTotal = yield serviceEstoque_1.default.valorTotal(data);
+            const valorEstoque = yield serviceEstoque_1.default.valorTotal();
+            console.log(valorEstoque);
         }
         catch (error) {
             console.log(error);

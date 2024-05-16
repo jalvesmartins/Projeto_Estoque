@@ -37,7 +37,8 @@ const base = async () => {
             await retirar(nome);
             break;
         case '4':
-            await valorTotal()    
+            await valorTotal();
+            break;
     }
 }
 
